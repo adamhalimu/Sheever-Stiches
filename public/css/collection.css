@@ -1,0 +1,381 @@
+/* =========================================
+   COLLECTIONS PREVIEW
+========================================= */
+
+.collections-preview {
+    width: 100%;
+    padding: clamp(80px, 10vw, 150px) clamp(20px, 4vw, 60px);
+    background: #f8f7f4;
+    color: #0a0a0a;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.collections-heading {
+    max-width: 650px;
+    margin: 0 auto clamp(45px, 6vw, 75px);
+    text-align: center;
+}
+
+.collections-eyebrow {
+    margin: 0 0 16px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.collections-heading h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.collections-intro {
+    max-width: 450px;
+    margin: 22px auto 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+}
+
+
+/* =========================================
+   COLLECTION GRID
+========================================= */
+
+.collection-grid {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(12px, 2vw, 28px);
+}
+
+
+/* =========================================
+   COLLECTION CARD
+========================================= */
+
+.collection-card {
+    position: relative;
+
+    min-height: clamp(450px, 48vw, 700px);
+
+    display: block;
+
+    overflow: hidden;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    background: #1b1b1b;
+}
+
+
+/* =========================================
+   IMAGE AREAS
+========================================= */
+
+.collection-image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    transition: transform 0.8s cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+.collection-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition:
+        transform 0.8s cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+
+.collection-card:hover .collection-image img {
+    transform: scale(1.04);
+}
+
+
+/*
+   Temporary visual treatment.
+   These areas are structured to receive
+   the final fashion photography later.
+*/
+
+.collection-image-dresses {
+    background:
+        linear-gradient(
+            145deg,
+            #343434 0%,
+            #1d1d1d 50%,
+            #0c0c0c 100%
+        );
+}
+
+.collection-image-tailoring {
+    background:
+        linear-gradient(
+            145deg,
+            #44413d 0%,
+            #272522 50%,
+            #111111 100%
+        );
+}
+
+.collection-image-evening {
+    background:
+        linear-gradient(
+            145deg,
+            #242424 0%,
+            #111111 55%,
+            #050505 100%
+        );
+}
+
+
+/* =========================================
+   TEMPORARY IMAGE LABEL
+========================================= */
+
+.collection-placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 400;
+    letter-spacing: 0.03em;
+
+    opacity: 0.18;
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.collection-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.75) 0%,
+            rgba(0, 0, 0, 0.12) 55%,
+            rgba(0, 0, 0, 0.05) 100%
+        );
+
+    transition: background 0.5s ease;
+}
+
+
+/* =========================================
+   COLLECTION CONTENT
+========================================= */
+
+.collection-content {
+    position: absolute;
+    inset: auto 30px 30px;
+
+    z-index: 2;
+}
+
+.collection-number {
+    margin: 0 0 10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
+}
+
+.collection-content h3 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 3vw, 3.2rem);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.collection-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 18px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.collection-link span {
+    font-size: 1rem;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.collection-card:hover .collection-image {
+    transform: scale(1.04);
+}
+
+.collection-card:hover .collection-overlay {
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.82) 0%,
+            rgba(0, 0, 0, 0.18) 60%,
+            rgba(0, 0, 0, 0.08) 100%
+        );
+}
+
+.collection-card:hover .collection-link span {
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   VIEW ALL
+========================================= */
+
+.collections-footer {
+    display: flex;
+    justify-content: center;
+
+    margin-top: clamp(40px, 5vw, 65px);
+}
+
+.collections-view-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid #0a0a0a;
+
+    color: #0a0a0a;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: opacity 0.3s ease;
+}
+
+.collections-view-all span {
+    transition: transform 0.3s ease;
+}
+
+.collections-view-all:hover {
+    opacity: 0.55;
+}
+
+.collections-view-all:hover span {
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .collection-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .collection-card:last-child {
+        grid-column: 1 / -1;
+        min-height: 500px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .collections-preview {
+        padding: 75px 18px;
+    }
+
+    .collections-heading {
+        margin-bottom: 40px;
+    }
+
+    .collections-heading h2 {
+        font-size: 2.8rem;
+    }
+
+    .collections-intro {
+        font-size: 0.8rem;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .collection-card,
+    .collection-card:last-child {
+        grid-column: auto;
+        min-height: 500px;
+    }
+
+    .collection-content {
+        inset: auto 22px 24px;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .collections-preview {
+        padding: 65px 14px;
+    }
+
+    .collection-card,
+    .collection-card:last-child {
+        min-height: 430px;
+    }
+}

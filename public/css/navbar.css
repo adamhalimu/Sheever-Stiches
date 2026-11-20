@@ -1,0 +1,474 @@
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+/* =========================================
+   ANNOUNCEMENT BAR
+========================================= */
+
+.announcement-bar {
+    width: 100%;
+    min-height: 36px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0a0a0a;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.announcement-track {
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.announcement-text {
+    margin: 0;
+    padding: 9px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    line-height: 1.4;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+/* Announcement transition states */
+
+.announcement-text.is-changing {
+    opacity: 0;
+    transform: translateY(-8px);
+}
+
+.announcement-text.is-entering {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+
+/* =========================================
+   ANNOUNCEMENT RESPONSIVENESS
+========================================= */
+
+@media (max-width: 700px) {
+
+    .announcement-bar {
+        min-height: 34px;
+        padding: 0 14px;
+    }
+
+    .announcement-text {
+        font-size: 0.56rem;
+        letter-spacing: 0.11em;
+        white-space: normal;
+        line-height: 1.5;
+    }
+}
+
+
+@media (max-width: 380px) {
+
+    .announcement-bar {
+        min-height: 32px;
+        padding: 0 10px;
+    }
+
+    .announcement-text {
+        font-size: 0.5rem;
+        letter-spacing: 0.08em;
+    }
+}
+
+/* ========================================
+   SHEEVER STITCHES
+   NAVBAR
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+.site-header {
+    width: 100%;
+    background-color: #f8f7f4;
+    border-bottom: 1px solid #e5e3df;
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar {
+    width: 100%;
+    min-height: 82px;
+
+    padding: 0 clamp(20px, 4vw, 60px);
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+
+    position: relative;
+}
+
+
+/* ========================================
+   LEFT SIDE
+======================================== */
+
+.nav-left {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: clamp(18px, 2.2vw, 34px);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.nav-links a {
+    position: relative;
+
+    display: block;
+
+    color: #0a0a0a;
+    text-decoration: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(0.65rem, 0.7vw, 0.75rem);
+    font-weight: 400;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.5;
+}
+
+.nav-links a.active::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: #0a0a0a;
+}
+
+
+/* ========================================
+   CENTER LOGO
+======================================== */
+
+.navbar-logo {
+    justify-self: center;
+
+    color: #0a0a0a;
+    text-decoration: none;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(1rem, 1.5vw, 1.35rem);
+    font-weight: 400;
+
+    letter-spacing: clamp(0.1em, 0.18vw, 0.18em);
+
+    white-space: nowrap;
+
+    line-height: 1;
+}
+
+
+/* ========================================
+   RIGHT SIDE
+======================================== */
+
+.nav-actions {
+    justify-self: end;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-icon {
+    position: relative;
+
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #0a0a0a;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+.nav-icon:hover {
+    opacity: 0.5;
+}
+
+.nav-icon svg {
+    width: 19px;
+    height: 19px;
+
+    fill: none;
+    stroke: currentColor;
+
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* ========================================
+   CART COUNT
+======================================== */
+
+.cart-count {
+    position: absolute;
+
+    top: -8px;
+    right: -9px;
+
+    min-width: 15px;
+    height: 15px;
+
+    padding: 0 3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #0a0a0a;
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.55rem;
+    line-height: 1;
+}
+
+
+/* ========================================
+   HAMBURGER
+======================================== */
+
+.menu-toggle {
+    display: none;
+
+    width: 26px;
+    height: 18px;
+
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    cursor: pointer;
+
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 1px;
+
+    display: block;
+
+    background-color: #0a0a0a;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        min-height: 76px;
+        padding: 0 24px;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-links a {
+        font-size: 0.63rem;
+    }
+
+    .navbar-logo {
+        font-size: 1rem;
+        letter-spacing: 0.12em;
+    }
+
+    .nav-actions {
+        gap: 14px;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        min-height: 70px;
+
+        padding: 0 18px;
+
+        grid-template-columns: 1fr auto 1fr;
+    }
+
+
+    /* Hamburger */
+
+    .menu-toggle {
+        display: flex;
+    }
+
+
+    /* Hide desktop links */
+
+    .nav-links {
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 28px 20px 32px;
+
+        background-color: #f8f7f4;
+
+        border-bottom: 1px solid #e5e3df;
+
+        display: none;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 22px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+
+
+    /* Center logo */
+
+    .navbar-logo {
+        justify-self: center;
+
+        font-size: 0.88rem;
+        letter-spacing: 0.1em;
+    }
+
+
+    /* Right icons */
+
+    .nav-actions {
+        justify-self: end;
+
+        gap: 11px;
+    }
+
+    .nav-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .nav-icon svg {
+        width: 17px;
+        height: 17px;
+    }
+}
+
+
+/* ========================================
+   VERY SMALL PHONES
+======================================== */
+
+@media (max-width: 380px) {
+
+    .navbar {
+        padding: 0 14px;
+    }
+
+    .navbar-logo {
+        font-size: 0.76rem;
+        letter-spacing: 0.07em;
+    }
+
+    .nav-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .nav-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .nav-actions {
+        gap: 8px;
+    }
+
+    .menu-toggle {
+        width: 23px;
+    }
+}

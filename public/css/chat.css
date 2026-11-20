@@ -1,0 +1,206 @@
+.sheever-chat {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 900;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sheever-chat-toggle {
+    padding: 15px 22px;
+
+    border: 1px solid #0a0a0a;
+    background: #0a0a0a;
+    color: #ffffff;
+
+    font-size: .65rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: background-color .3s ease, color .3s ease;
+}
+
+.sheever-chat-toggle:hover {
+    background: #ffffff;
+    color: #0a0a0a;
+}
+
+.sheever-chat-toggle[hidden],
+.sheever-chat-panel[hidden] {
+    display: none;
+}
+
+.sheever-chat-panel {
+    width: min(360px, calc(100vw - 32px));
+    height: min(520px, calc(100vh - 100px));
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid #dedbd6;
+    background: #ffffff;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, .15);
+}
+
+.sheever-chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 16px 18px;
+
+    background: #0a0a0a;
+    color: #ffffff;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+}
+
+.sheever-chat-close {
+    border: 0;
+    background: transparent;
+    color: #ffffff;
+
+    font-size: 1.4rem;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.sheever-chat-messages {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 18px;
+
+    overflow-y: auto;
+}
+
+.sheever-chat-message {
+    max-width: 85%;
+
+    padding: 11px 14px;
+
+    font-size: .8rem;
+    line-height: 1.6;
+
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.sheever-chat-assistant {
+    align-self: flex-start;
+    background: #f3f1ed;
+    color: #0a0a0a;
+}
+
+.sheever-chat-user {
+    align-self: flex-end;
+    background: #0a0a0a;
+    color: #ffffff;
+}
+
+.sheever-chat-message a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.sheever-chat-message.is-typing {
+    color: #777777;
+}
+
+.sheever-chat-suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    padding: 0 18px 14px;
+}
+
+.sheever-chat-suggestions[hidden] {
+    display: none;
+}
+
+.sheever-chat-chip {
+    padding: 8px 12px;
+
+    border: 1px solid #d8d5d0;
+    background: transparent;
+    color: #0a0a0a;
+
+    font-size: .68rem;
+
+    cursor: pointer;
+}
+
+.sheever-chat-chip:hover {
+    border-color: #0a0a0a;
+}
+
+.sheever-chat-form {
+    display: flex;
+    border-top: 1px solid #dedbd6;
+}
+
+.sheever-chat-input {
+    flex: 1;
+    min-width: 0;
+
+    padding: 15px 16px;
+
+    border: 0;
+    outline: none;
+
+    font-size: .8rem;
+}
+
+.sheever-chat-send {
+    padding: 0 18px;
+
+    border: 0;
+    background: #0a0a0a;
+    color: #ffffff;
+
+    font-size: .62rem;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+.sheever-chat-send:disabled,
+.sheever-chat-input:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.sheever-chat-note {
+    margin: 0;
+    padding: 10px 16px;
+
+    border-top: 1px solid #dedbd6;
+
+    color: #777777;
+
+    font-size: .62rem;
+    line-height: 1.5;
+}
+
+.sheever-chat-note a {
+    color: #0a0a0a;
+}
+
+@media (max-width: 500px) {
+
+    .sheever-chat {
+        right: 16px;
+        bottom: 16px;
+    }
+
+}

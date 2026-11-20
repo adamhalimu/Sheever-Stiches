@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <link rel="icon" href="/public/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png?v=4">
+<link rel="apple-touch-icon" href="/public/favicon-192.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheever Stiches</title>
+       <link rel="stylesheet" href="css/navbar.css">
+       <link rel="stylesheet" href="css/home.css">
+       <link rel="stylesheet" href="css/collection.css">
+       <link rel="stylesheet" href="css/product.css">
+       <link rel="stylesheet" href="css/about-preview.css">
+       <link rel="stylesheet" href="css/bts.css">
+       <link rel="stylesheet" href="css/footer.css">
+       <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+    <div class="announcement-bar" id="announcementBar">
+    <div class="announcement-track">
+        <p class="announcement-text" id="announcementText">
+            New collection now available
+        </p>
+    </div>
+</div>
+<header class="site-header">
+    <nav class="navbar">
+
+        <!-- LEFT SIDE -->
+        <div class="nav-left">
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li>
+                    <a href="index.html" class="active">Home</a>
+                </li>
+
+                <li>
+                    <a href="collections.html">Collections</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                
+                    <li>
+                        <a
+                            href="bespoke.html"
+                           
+                        >
+                            Bespoke
+                        </a>
+                    </li>
+
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+
+        </div>
+
+
+        <!-- CENTER LOGO -->
+        <a href="index.html" class="navbar-logo">
+            SHEEVER STITCHES
+        </a>
+
+
+        <!-- RIGHT SIDE -->
+        <div class="nav-actions">
+
+            <!-- Wishlist -->
+            <a
+                href="wishlist.html"
+                class="nav-icon"
+                aria-label="Wishlist"
+            >
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                >
+                    <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z"
+                    />
+                </svg>
+
+                  <span
+                        class="nav-badge"
+                        id="wishlistCount"
+                        aria-label="0 items in wishlist"
+                    > 0
+                    </span>
+            </a>
+
+           
+
+
+            <!-- Shopping Bag -->
+            <a
+                href="cart.html"
+                class="nav-icon"
+                aria-label="Shopping bag"
+            >
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                >
+                    <path
+                        d="M6 8h12l1 13H5L6 8Z"
+                    />
+
+                    <path
+                        d="M9 8a3 3 0 0 1 6 0"
+                    />
+                </svg>
+
+                <span
+                    class="cart-count"
+                    id="cartCount"
+                    aria-label="0 items in shopping bag"
+                >
+                    0
+                </span>
+            </a>
+
+        </div>
+
+    </nav>
+</header>
+
+<!-- =========================================
+     HERO SECTION
+========================================= -->
+
+<main>
+    <section class="hero" aria-labelledby="heroTitle">
+
+        <div class="hero-background">
+            <div class="hero-placeholder"><img src="images/grey-dress.jpeg" alt=""></div>
+        </div>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <p class="hero-eyebrow">Sheever Stitches</p>
+
+            <h1 id="heroTitle">
+                Elegance,<br>
+                Tailored For You.
+            </h1>
+
+            <p class="hero-description">
+                Timeless silhouettes, refined details,
+                and modern African craftsmanship.
+            </p>
+
+            <div class="hero-actions">
+                <a href="collections.html" class="hero-button">
+                    Shop Collection
+                </a>
+
+                <a href="about.html" class="hero-button">
+                    Discover Sheever
+                </a>
+            </div>
+        </div>
+
+    </section>
+    <!-- =========================================
+     COLLECTIONS SECTION
+========================================= -->
+<section class="collections-preview" aria-labelledby="collectionsTitle">
+
+    <div class="collections-heading">
+        <p class="collections-eyebrow">
+            Explore Sheever
+        </p>
+
+        <h2 id="collectionsTitle">
+            The Collections
+        </h2>
+
+        <p class="collections-intro">
+            Curated pieces designed with intention,
+            precision, and timeless elegance.
+        </p>
+    </div>
+
+    <div class="collection-grid">
+
+        <!-- Dresses -->
+        <a
+            href="collections.html?category=dresses"
+            class="collection-card"
+        >
+            <div class="collection-image collection-image-dresses">
+                <img
+                    src="images/grey-dress.jpeg"
+                    alt="Dresses collection"
+                >
+            </div>
+
+            <div class="collection-overlay"></div>
+
+            <div class="collection-content">
+                <p class="collection-number">
+                    01
+                </p>
+
+                <h3>
+                    Dresses
+                </h3>
+
+                <span class="collection-link">
+                    Explore Collection
+                    <span aria-hidden="true">→</span>
+                </span>
+            </div>
+        </a>
+
+
+        <!-- Tailoring -->
+        <a
+            href="collections.html?category=tailoring"
+            class="collection-card"
+        >
+            <div class="collection-image collection-image-tailoring">
+                <img
+                    src="images/grey-dress.jpeg"
+                    alt="Tailoring collection"
+                >
+            </div>
+
+            <div class="collection-overlay"></div>
+
+            <div class="collection-content">
+                <p class="collection-number">
+                    02
+                </p>
+
+                <h3>
+                    Tailoring
+                </h3>
+
+                <span class="collection-link">
+                    Explore Collection
+                    <span aria-hidden="true">→</span>
+                </span>
+            </div>
+        </a>
+
+
+        <!-- Evening -->
+        <a
+            href="collections.html?category=evening"
+            class="collection-card"
+        >
+            <div class="collection-image collection-image-evening">
+                <img
+                    src="images/grey-dress.jpeg"
+                    alt="Evening collection"
+                >
+            </div>
+
+            <div class="collection-overlay"></div>
+
+            <div class="collection-content">
+                <p class="collection-number">
+                    03
+                </p>
+
+                <h3>
+                    Evening
+                </h3>
+
+                <span class="collection-link">
+                    Explore Collection
+                    <span aria-hidden="true">→</span>
+                </span>
+            </div>
+        </a>
+
+    </div>
+
+
+    <div class="collections-footer">
+        <a
+            href="collections.html"
+            class="collections-view-all"
+        >
+            View All Collections
+            <span aria-hidden="true">→</span>
+        </a>
+    </div>
+
+</section>
+
+<!--FEATURED PRODUCTS -->
+
+<section class="featured-products" aria-labelledby="featuredTitle">
+
+    <div class="featured-heading">
+
+        <div>
+            <p class="featured-eyebrow">Selected Pieces</p>
+
+            <h2 id="featuredTitle">
+                Featured Pieces
+            </h2>
+        </div>
+
+        <p class="featured-intro">
+            Discover signature pieces designed to
+            become part of your wardrobe.
+        </p>
+
+    </div>
+
+
+    <div class="product-grid" id="featuredProducts">
+        <!-- Products generated by JavaScript -->
+    </div>
+
+
+    <div class="featured-footer">
+
+        <a href="collections.html" class="featured-view-all">
+            View All Pieces
+            <span aria-hidden="true">→</span>
+        </a>
+
+    </div>
+
+</section>
+<!-- =========================================
+     BRAND STORY
+========================================= -->
+
+<section class="brand-story" aria-labelledby="brandStoryTitle">
+
+    <div class="brand-story-inner">
+
+        <!-- Visual -->
+<div class="brand-story-visual">
+    <img
+        src="images/grey-dress.jpeg"
+        alt="Sheever Stitches fashion"
+        class="brand-story-image"
+    >
+</div>
+
+        <!-- Content -->
+
+        <div class="brand-story-content">
+
+            <p class="brand-story-eyebrow">
+                The Sheever Story
+            </p>
+
+            <h2 id="brandStoryTitle">
+                Designed with intention.
+                <em>Made to be remembered.</em>
+            </h2>
+
+            <p class="brand-story-text">
+                Sheever Stitches creates refined pieces for women
+                who appreciate quiet confidence, thoughtful
+                craftsmanship, and timeless style.
+            </p>
+
+            <p class="brand-story-text">
+                Every silhouette is considered, every detail has
+                purpose, and every piece is designed to move
+                effortlessly between moments.
+            </p>
+
+            <a href="about.html" class="brand-story-link">
+                Discover Our Story
+                <span aria-hidden="true">→</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="bts-section" aria-labelledby="btsTitle">
+
+   <div class="bts-visual">
+    <video
+        class="bts-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="images/craft-video-poster.jpg"
+        aria-label="Behind the scenes of Sheever Stitches"
+    >
+        <source
+            src="images/babe.mp4"
+            type="video/mp4"
+        >
+        Your browser does not support the video element.
+    </video>
+</div>
+
+    <div class="bts-content">
+
+        <p class="bts-eyebrow">
+            Behind the Scenes
+        </p>
+
+        <h2 id="btsTitle">
+            Where the vision
+            <em>takes shape.</em>
+        </h2>
+
+        <p class="bts-description">
+            Every Sheever Stitches piece begins long before
+            it reaches the wardrobe. From selecting fabrics
+            and developing silhouettes to cutting, stitching,
+            and refining every detail, each stage is handled
+            with intention.
+        </p>
+
+        <p class="bts-description">
+            This is the process behind the finished piece —
+            the hands, decisions, and craftsmanship that
+            transform an idea into something made to be worn
+            and remembered.
+        </p>
+
+        <a href="about.html" class="bts-link">
+            Explore Our Process
+            <span aria-hidden="true">→</span>
+        </a>
+
+    </div>
+
+</section>
+<footer class="site-footer">
+
+    <div class="footer-main">
+
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+                SHEEVER STITCHES
+            </a>
+
+            <p class="footer-tagline">
+                Timeless silhouettes. Thoughtful craftsmanship.
+                Made to be remembered.
+            </p>
+        </div>
+
+
+        <div class="footer-column">
+            <h3>Explore</h3>
+
+            <ul>
+                <li>
+                    <a href="collections.html">Collections</a>
+                </li>
+
+                <li>
+                    <a href="about.html">Our Story</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+                <li>
+                    <a href="cart.html">Shopping Bag</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="footer-column">
+            <h3>Connect</h3>
+
+            <ul>
+                <li>
+                    <a href="#" aria-label="Instagram">
+                        Instagram
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" aria-label="Facebook">
+                        Facebook
+                    </a>
+                </li>
+
+                <li>
+                    <a href="mailto:hello@sheeverstitches.com">
+                        Email Us
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="footer-column footer-contact">
+            <h3>Atelier</h3>
+
+            <p>
+                Made with intention.<br>
+                Designed for you.
+            </p>
+
+            <a href="contact.html" class="footer-contact-link">
+                Get in Touch
+                <span aria-hidden="true">→</span>
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Sheever Stitches. All rights reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+
+    </div>
+
+</footer>
+
+
+</main>
+
+
+<script src="js/navbar.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/wishlist.js"></script>
+<script src="js/product.js"></script>
+<script src="js/chat.js"></script>
+</body>
+</html>

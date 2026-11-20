@@ -1,0 +1,599 @@
+
+/* ========================================
+   BESPOKE SHARED
+======================================== */
+
+.bespoke-eyebrow {
+    margin: 0 0 20px;
+
+    color: #777777;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .62rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.bespoke-hero h1 em,
+.bespoke-intro h2 em,
+.bespoke-section-heading h2 em,
+.bespoke-craft-content h2 em,
+.bespoke-cta h2 em {
+    font-style: italic;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.bespoke-hero {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(0, .9fr);
+
+    min-height: 720px;
+}
+
+.bespoke-hero-visual {
+    min-height: 600px;
+    overflow: hidden;
+}
+
+.bespoke-hero-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center center;
+
+    transition: transform .8s ease;
+}
+
+.bespoke-hero-visual:hover .bespoke-hero-image {
+    transform: scale(1.02);
+}
+
+.bespoke-hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 80px clamp(40px, 7vw, 110px);
+}
+
+.bespoke-hero-content h1 {
+    max-width: 620px;
+
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    font-weight: 400;
+    line-height: .98;
+    letter-spacing: -.035em;
+}
+
+.bespoke-hero-description {
+    max-width: 500px;
+
+    margin: 32px 0 0;
+
+    color: #555555;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .82rem;
+    line-height: 1.9;
+}
+
+.bespoke-hero-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    width: fit-content;
+
+    margin-top: 38px;
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid #111111;
+
+    color: #111111;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .62rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+
+    text-decoration: none;
+}
+
+.bespoke-hero-link span {
+    transition: transform .25s ease;
+}
+
+.bespoke-hero-link:hover span {
+    transform: translateX(5px);
+}
+
+
+/* ========================================
+   INTRO
+======================================== */
+
+.bespoke-intro {
+    width: min(100% - 48px, 850px);
+
+    margin: 0 auto;
+
+    padding: 150px 0;
+
+    text-align: center;
+}
+
+.bespoke-intro h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    font-weight: 400;
+    line-height: .98;
+    letter-spacing: -.035em;
+}
+
+.bespoke-intro-description {
+    max-width: 570px;
+
+    margin: 35px auto 0;
+
+    color: #555555;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .82rem;
+    line-height: 1.9;
+}
+
+
+/* ========================================
+   PROCESS
+======================================== */
+
+.bespoke-process {
+    padding: 130px 6vw;
+
+    background: #f7f6f3;
+}
+
+.bespoke-section-heading {
+    max-width: 700px;
+
+    margin: 0 auto 80px;
+
+    text-align: center;
+}
+
+.bespoke-section-heading h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.7rem, 4.5vw, 4.5rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -.03em;
+}
+
+.bespoke-process-grid {
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    border-top: 1px solid #d8d5d0;
+}
+
+.bespoke-process-card {
+    min-height: 260px;
+
+    padding: 35px;
+
+    border-right: 1px solid #d8d5d0;
+}
+
+.bespoke-process-card:first-child {
+    padding-left: 0;
+}
+
+.bespoke-process-card:last-child {
+    padding-right: 0;
+    border-right: 0;
+}
+
+.bespoke-process-number {
+    display: block;
+
+    margin-bottom: 55px;
+
+    color: #888888;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .6rem;
+    letter-spacing: .15em;
+}
+
+.bespoke-process-card h3 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.bespoke-process-card p {
+    max-width: 260px;
+
+    margin: 18px 0 0;
+
+    color: #555555;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .76rem;
+    line-height: 1.9;
+}
+
+
+/* ========================================
+   CRAFT
+======================================== */
+
+.bespoke-craft {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    min-height: 700px;
+}
+
+.bespoke-craft-visual {
+    min-height: 600px;
+
+    overflow: hidden;
+}
+
+.bespoke-craft-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center center;
+
+    transition: transform .8s ease;
+}
+
+.bespoke-craft-visual:hover .bespoke-craft-image {
+    transform: scale(1.02);
+}
+
+.bespoke-craft-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 90px clamp(40px, 8vw, 120px);
+}
+
+.bespoke-craft-content h2 {
+    max-width: 600px;
+
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -.03em;
+}
+
+.bespoke-craft-content p:not(.bespoke-eyebrow) {
+    max-width: 540px;
+
+    margin: 25px 0 0;
+
+    color: #555555;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8rem;
+    line-height: 1.9;
+}
+
+
+/* ========================================
+   OCCASIONS
+======================================== */
+
+.bespoke-occasions {
+    padding: 140px 6vw;
+}
+
+.bespoke-occasions-list {
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    border-top: 1px solid #d8d5d0;
+}
+
+.bespoke-occasion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 30px 0;
+
+    border-bottom: 1px solid #d8d5d0;
+}
+
+.bespoke-occasion:nth-child(odd) {
+    padding-right: 45px;
+}
+
+.bespoke-occasion:nth-child(even) {
+    padding-left: 45px;
+
+    border-left: 1px solid #d8d5d0;
+}
+
+.bespoke-occasion span {
+    color: #888888;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .6rem;
+    letter-spacing: .15em;
+}
+
+.bespoke-occasion h3 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.7rem, 3vw, 2.8rem);
+    font-weight: 400;
+}
+
+
+/* ========================================
+   CTA
+======================================== */
+
+.bespoke-cta {
+    padding: 150px 30px;
+
+    text-align: center;
+
+    background: #0a0a0a;
+    color: #ffffff;
+}
+
+.bespoke-cta .bespoke-eyebrow {
+    color: #999999;
+}
+
+.bespoke-cta h2 {
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 400;
+    line-height: .95;
+    letter-spacing: -.035em;
+}
+
+.bespoke-cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 45px;
+
+    padding-bottom: 9px;
+
+    border-bottom: 1px solid #ffffff;
+
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .62rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+
+    text-decoration: none;
+}
+
+.bespoke-cta-link span {
+    transition: transform .25s ease;
+}
+
+.bespoke-cta-link:hover span {
+    transform: translateX(5px);
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    .bespoke-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .bespoke-hero-visual {
+        min-height: 600px;
+    }
+
+    .bespoke-hero-content {
+        padding: 90px 8vw;
+    }
+
+    .bespoke-process-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .bespoke-process-card,
+    .bespoke-process-card:first-child,
+    .bespoke-process-card:last-child {
+        padding: 35px 25px;
+
+        border-right: 1px solid #d8d5d0;
+        border-bottom: 1px solid #d8d5d0;
+    }
+
+    .bespoke-process-card:nth-child(2n) {
+        border-right: 0;
+    }
+
+    .bespoke-process-card:nth-last-child(-n + 2) {
+        border-bottom: 0;
+    }
+
+    .bespoke-craft {
+        grid-template-columns: 1fr;
+    }
+
+    .bespoke-craft-visual {
+        min-height: 550px;
+    }
+
+    .bespoke-craft-content {
+        padding: 90px 8vw;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .bespoke-hero-visual {
+        min-height: 480px;
+    }
+
+    .bespoke-hero-content {
+        padding: 70px 20px;
+    }
+
+    .bespoke-intro {
+        width: min(100% - 36px, 700px);
+
+        padding: 90px 0;
+    }
+
+    .bespoke-process {
+        padding: 85px 20px;
+    }
+
+    .bespoke-section-heading {
+        margin-bottom: 55px;
+    }
+
+    .bespoke-process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bespoke-process-card,
+    .bespoke-process-card:first-child,
+    .bespoke-process-card:last-child {
+        padding: 35px 0;
+
+        border-right: 0;
+        border-bottom: 1px solid #d8d5d0;
+    }
+
+    .bespoke-process-card:last-child {
+        border-bottom: 0;
+    }
+
+    .bespoke-process-number {
+        margin-bottom: 30px;
+    }
+
+    .bespoke-craft-visual {
+        min-height: 450px;
+    }
+
+    .bespoke-craft-content {
+        padding: 70px 20px;
+    }
+
+    .bespoke-occasions {
+        padding: 90px 20px;
+    }
+
+    .bespoke-occasions-list {
+        grid-template-columns: 1fr;
+    }
+
+    .bespoke-occasion:nth-child(odd),
+    .bespoke-occasion:nth-child(even) {
+        padding: 25px 0;
+
+        border-left: 0;
+    }
+
+    .bespoke-cta {
+        padding: 100px 20px;
+    }
+
+}
+/* ========================================
+   NAV BADGE (wishlist and bag counts)
+======================================== */
+
+.nav-icon {
+    position: relative;
+}
+
+.nav-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+
+    min-width: 16px;
+    height: 16px;
+    padding: 0 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 999px;
+    background: #0a0a0a;
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .55rem;
+    line-height: 1;
+
+    pointer-events: none;
+}

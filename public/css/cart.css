@@ -1,0 +1,1667 @@
+/* ========================================
+   CART HEADER
+======================================== */
+
+.cart-header {
+    width: min(100% - 48px, 1400px);
+    margin: 0 auto;
+
+    padding: 100px 0 65px;
+
+    border-bottom: 1px solid #dedbd6;
+}
+
+.cart-eyebrow {
+    margin: 0 0 18px;
+
+    color: #777777;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .62rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.cart-header h1 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 400;
+    line-height: .95;
+    letter-spacing: -.03em;
+}
+
+.cart-item-count {
+    margin: 22px 0 0;
+
+    color: #666666;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7rem;
+    letter-spacing: .08em;
+}
+
+
+/* ========================================
+   CART SECTION
+======================================== */
+
+.cart-section {
+    width: min(100% - 48px, 1400px);
+    margin: 0 auto;
+
+    padding: 55px 0 120px;
+}
+
+.cart-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        360px;
+
+    gap: 70px;
+
+    align-items: start;
+}
+
+
+/* ========================================
+   CART ITEMS
+======================================== */
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item {
+    display: grid;
+
+    grid-template-columns:
+        180px
+        minmax(0, 1fr);
+
+    gap: 28px;
+
+    padding: 0 0 32px;
+    margin: 0 0 32px;
+
+    border-bottom: 1px solid #dedbd6;
+}
+
+.cart-item:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ========================================
+   CART PRODUCT IMAGE
+======================================== */
+
+.cart-item-image {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #171717 0%,
+            #303030 50%,
+            #111111 100%
+        );
+
+    color: #ffffff;
+}
+
+.cart-item-image span {
+    padding: 15px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    text-align: center;
+
+    opacity: .7;
+}
+
+
+/* ========================================
+   CART PRODUCT INFORMATION
+======================================== */
+
+.cart-item-content {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+.cart-item-category {
+    margin: 0 0 8px;
+
+    color: #777777;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .57rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.cart-item-name {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.cart-item-price {
+    margin: 12px 0 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .72rem;
+}
+
+
+/* ========================================
+   SIZE
+======================================== */
+
+.cart-item-size {
+    margin: 18px 0 0;
+
+    color: #555555;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .68rem;
+}
+
+.cart-item-size strong {
+    color: #0a0a0a;
+    font-weight: 400;
+}
+
+
+/* ========================================
+   CART ITEM BOTTOM
+======================================== */
+
+.cart-item-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: auto;
+    padding-top: 28px;
+
+    gap: 20px;
+}
+
+
+/* ========================================
+   QUANTITY
+======================================== */
+
+.cart-quantity {
+    display: inline-flex;
+    align-items: center;
+
+    border: 1px solid #d8d5d0;
+}
+
+.cart-quantity-button {
+    width: 36px;
+    height: 36px;
+
+    border: 0;
+    background: transparent;
+
+    font-size: 1rem;
+    font-weight: 300;
+
+    cursor: pointer;
+
+    transition: background-color .25s ease;
+}
+
+.cart-quantity-button:hover {
+    background: #f4f2ee;
+}
+
+.cart-quantity-value {
+    min-width: 38px;
+
+    text-align: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7rem;
+}
+
+
+/* ========================================
+   REMOVE
+======================================== */
+
+.remove-item {
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    color: #777777;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .58rem;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: color .25s ease;
+}
+
+.remove-item:hover {
+    color: #0a0a0a;
+}
+
+
+/* ========================================
+   SUMMARY
+======================================== */
+
+.cart-summary {
+    position: sticky;
+    top: 30px;
+
+    padding: 30px;
+
+    background: #f7f6f3;
+}
+
+.cart-summary h2 {
+    margin: 0 0 30px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.55rem;
+    font-weight: 400;
+}
+
+
+.summary-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-bottom: 18px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .68rem;
+    line-height: 1.5;
+}
+
+.summary-row span:last-child {
+    text-align: right;
+    color: #666666;
+}
+
+.summary-divider {
+    height: 1px;
+
+    margin: 25px 0;
+
+    background: #d8d5d0;
+}
+
+.summary-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .72rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.summary-total strong {
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+
+/* ========================================
+   CHECKOUT
+======================================== */
+
+.checkout-button {
+    width: 100%;
+
+    margin-top: 30px;
+    padding: 17px 20px;
+
+    border: 1px solid #0a0a0a;
+    background: #0a0a0a;
+
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .62rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        background-color .3s ease,
+        color .3s ease;
+}
+
+.checkout-button:hover {
+    background: transparent;
+    color: #0a0a0a;
+}
+
+.checkout-button:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
+
+.checkout-note {
+    margin: 17px 0 0;
+
+    color: #777777;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .58rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+/* ========================================
+   EMPTY CART
+======================================== */
+
+.empty-cart {
+    max-width: 650px;
+
+    margin: 20px auto 0;
+
+    padding: 80px 20px;
+
+    text-align: center;
+}
+
+.empty-cart-eyebrow {
+    margin: 0 0 18px;
+
+    color: #777777;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .6rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.empty-cart h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 400;
+}
+
+.empty-cart > p:not(.empty-cart-eyebrow) {
+    max-width: 470px;
+
+    margin: 22px auto 0;
+
+    color: #666666;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .78rem;
+    line-height: 1.8;
+}
+
+.continue-shopping {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 32px;
+
+    color: #0a0a0a;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .62rem;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+
+    text-decoration: none;
+}
+
+.continue-shopping span {
+    transition: transform .25s ease;
+}
+
+.continue-shopping:hover span {
+    transform: translateX(5px);
+}
+.order-submitted {
+    max-width: 700px;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.order-submitted-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.order-submitted h2 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.order-submitted > p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.order-submitted-details {
+    margin: 40px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-submitted-details div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.order-submitted-details div:last-child {
+    border-bottom: none;
+}
+
+.order-submitted-details span {
+    color: #777;
+}
+
+.order-submitted-details strong {
+    font-weight: 500;
+}
+
+.continue-shopping {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ========================================
+   CART PRODUCT IMAGE
+======================================== */
+
+.cart-item-image {
+    width: 180px;
+    aspect-ratio: 3 / 4;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    background: #f3f1ed;
+}
+
+
+.cart-item-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform .6s ease;
+}
+
+
+.cart-item:hover .cart-item-image img {
+    transform: scale(1.03);
+}
+
+
+
+@media (max-width: 600px) {
+
+    .cart-item-image {
+        width: 110px;
+        aspect-ratio: 3 / 4;
+    }
+
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 950px) {
+
+    .cart-layout {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .cart-summary {
+        position: static;
+        max-width: 500px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .cart-header {
+        width: min(100% - 36px, 600px);
+        padding: 70px 0 45px;
+    }
+
+    .cart-section {
+        width: min(100% - 36px, 600px);
+        padding: 35px 0 80px;
+    }
+
+    .cart-item {
+        grid-template-columns: 110px minmax(0, 1fr);
+        gap: 17px;
+    }
+
+    .cart-item-name {
+        font-size: 1.05rem;
+    }
+
+    .cart-item-actions {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .cart-summary {
+        padding: 24px;
+    }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 380px) {
+
+    .cart-header {
+        width: min(100% - 28px, 600px);
+    }
+
+    .cart-section {
+        width: min(100% - 28px, 600px);
+    }
+
+    .cart-item {
+        grid-template-columns: 90px minmax(0, 1fr);
+    }
+
+    .cart-item-name {
+        font-size: .95rem;
+    }
+
+    .cart-item-price {
+        font-size: .65rem;
+    }
+    /* ========================================
+   CHECKOUT SECTION
+======================================== */
+
+.checkout-section {
+    width: 100%;
+    padding: 100px 0 140px;
+    background: #f7f6f3;
+    border-top: 1px solid #dedbd6;
+}
+
+.checkout-inner {
+    width: min(100% - 48px, 1000px);
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   CHECKOUT HEADER
+======================================== */
+
+.checkout-header {
+    max-width: 700px;
+    margin-bottom: 55px;
+}
+
+.checkout-eyebrow {
+    margin: 0 0 18px;
+    color: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .62rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.checkout-header h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 400;
+    line-height: .95;
+    letter-spacing: -.03em;
+}
+
+.checkout-header > p:last-child {
+    max-width: 500px;
+    margin: 25px 0 0;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .75rem;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   CHECKOUT CARD
+======================================== */
+
+.checkout-card {
+    margin-bottom: 24px;
+    padding: 38px;
+    background: #ffffff;
+    border: 1px solid #dedbd6;
+}
+
+.checkout-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 32px;
+}
+
+.checkout-step {
+    color: #999999;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .58rem;
+    letter-spacing: .12em;
+}
+
+.checkout-card-heading h3 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.45rem;
+    font-weight: 400;
+}
+
+
+/* ========================================
+   CHECKOUT FORM
+======================================== */
+
+.checkout-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.checkout-field:last-child {
+    grid-column: 1 / -1;
+}
+
+.checkout-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-field label {
+    margin-bottom: 10px;
+    color: #555555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .58rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.checkout-field input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 0;
+    border: 0;
+    border-bottom: 1px solid #cfcac4;
+    outline: none;
+    background: transparent;
+    color: #0a0a0a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .78rem;
+    transition: border-color .25s ease;
+}
+
+.checkout-field input:focus {
+    border-color: #0a0a0a;
+}
+
+.checkout-field input::placeholder {
+    color: #aaa7a2;
+}
+
+
+/* ========================================
+   ORDER REFERENCE
+======================================== */
+
+.reference-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background: #f7f6f3;
+}
+
+.reference-box span {
+    color: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .6rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.reference-box strong {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: .08em;
+}
+
+.reference-note {
+    margin: 15px 0 0;
+    color: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .62rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   PAYMENT OPTIONS
+======================================== */
+
+.payment-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.payment-option {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 260px;
+    padding: 28px;
+    border: 1px solid #dedbd6;
+}
+
+.payment-option-content h4 {
+    margin: 10px 0 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+}
+
+.payment-option-content p {
+    margin: 15px 0 0;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .68rem;
+    line-height: 1.7;
+}
+
+.payment-option-label {
+    color: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .55rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+
+.payment-button {
+    width: 100%;
+    margin-top: 35px;
+    padding: 16px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .58rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        border-color .3s ease;
+}
+
+.payment-button-primary {
+    border: 1px solid #0a0a0a;
+    background: #0a0a0a;
+    color: #ffffff;
+}
+
+.payment-button-primary:hover {
+    background: transparent;
+    color: #0a0a0a;
+}
+
+.payment-button-secondary {
+    border: 1px solid #0a0a0a;
+    background: transparent;
+    color: #0a0a0a;
+}
+
+.payment-button-secondary:hover {
+    background: #0a0a0a;
+    color: #ffffff;
+}
+
+.payment-button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+
+/* ========================================
+   BANK TRANSFER
+======================================== */
+
+.bank-instruction {
+    max-width: 600px;
+    margin: 0 0 30px;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7rem;
+    line-height: 1.7;
+}
+
+.bank-amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 22px;
+    background: #f7f6f3;
+}
+
+.bank-amount span {
+    color: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .6rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.bank-amount strong {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.bank-details-list {
+    border-top: 1px solid #dedbd6;
+}
+
+.bank-detail-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 18px 0;
+    border-bottom: 1px solid #dedbd6;
+}
+
+.bank-detail-row span {
+    color: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .58rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.bank-detail-row strong {
+    color: #0a0a0a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7rem;
+    font-weight: 400;
+    text-align: right;
+}
+
+.bank-confirmation {
+    margin-top: 35px;
+    padding-top: 30px;
+    border-top: 1px solid #dedbd6;
+}
+
+.bank-confirmation p {
+    margin: 0;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .68rem;
+    line-height: 1.7;
+}
+
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 22px;
+    padding: 15px 20px;
+    border: 1px solid #0a0a0a;
+    background: #0a0a0a;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .58rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition:
+        background-color .3s ease,
+        color .3s ease;
+}
+
+.whatsapp-button:hover {
+    background: transparent;
+    color: #0a0a0a;
+}
+
+.whatsapp-button span {
+    transition: transform .25s ease;
+}
+
+.whatsapp-button:hover span {
+    transform: translateX(4px);
+}
+
+
+/* ========================================
+   CHECKOUT SUCCESS
+======================================== */
+
+.checkout-success {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.checkout-success h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.checkout-success > p:not(.checkout-eyebrow):not(.payment-note) {
+    max-width: 500px;
+    margin: 25px auto 0;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .75rem;
+    line-height: 1.8;
+}
+
+.success-reference {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    margin: 35px auto 0;
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #dedbd6;
+}
+
+.success-reference span {
+    color: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .57rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.success-reference strong {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8rem;
+    letter-spacing: .08em;
+}
+
+.payment-note {
+    margin: 20px 0 0;
+    color: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .6rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   CHECKOUT TABLET
+======================================== */
+
+@media (max-width: 700px) {
+
+    .checkout-section {
+        padding: 75px 0 100px;
+    }
+
+    .checkout-inner {
+        width: min(100% - 36px, 600px);
+    }
+
+    .checkout-form {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout-field:last-child {
+        grid-column: auto;
+    }
+
+    .payment-options {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ========================================
+   CHECKOUT MOBILE
+======================================== */
+
+
+@media (max-width: 500px) {
+
+    .checkout-card {
+        padding: 25px 20px;
+    }
+
+    .checkout-card-heading {
+        gap: 12px;
+    }
+
+    .checkout-card-heading h3 {
+        font-size: 1.25rem;
+    }
+
+    .payment-option {
+        min-height: auto;
+        padding: 22px;
+    }
+
+    .reference-box {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .bank-detail-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .bank-detail-row strong {
+        text-align: left;
+    }
+
+    .bank-amount {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+/* ========================================
+   CHECKOUT SECTION
+======================================== */
+
+.checkout-section {
+    width: 100%;
+    padding: 100px 0 140px;
+    background: #f7f6f3;
+    border-top: 1px solid #dedbd6;
+}
+
+.checkout-inner {
+    width: min(100% - 48px, 1000px);
+    margin: 0 auto;
+}
+
+}
+/* ========================================
+   CHECKOUT HEADER
+======================================== */
+
+.checkout-header {
+    max-width: 700px;
+    margin-bottom: 55px;
+}
+
+.checkout-eyebrow {
+    margin: 0 0 18px;
+    color: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .62rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.checkout-header h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 400;
+    line-height: .95;
+    letter-spacing: -.03em;
+}
+
+.checkout-header > p:last-child {
+    max-width: 500px;
+    margin: 25px 0 0;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .75rem;
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   CHECKOUT CARD
+======================================== */
+
+.checkout-card {
+    margin-bottom: 24px;
+    padding: 38px;
+    background: #ffffff;
+    border: 1px solid #dedbd6;
+}
+
+.checkout-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 32px;
+}
+
+.checkout-step {
+    color: #999999;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .58rem;
+    letter-spacing: .12em;
+}
+
+.checkout-card-heading h3 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.45rem;
+    font-weight: 400;
+}
+
+
+/* ========================================
+   CHECKOUT FORM
+======================================== */
+
+.checkout-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.checkout-field:last-child {
+    grid-column: 1 / -1;
+}
+
+.checkout-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-field label {
+    margin-bottom: 10px;
+    color: #555555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .58rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.checkout-field input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 0;
+    border: 0;
+    border-bottom: 1px solid #cfcac4;
+    outline: none;
+    background: transparent;
+    color: #0a0a0a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .78rem;
+    transition: border-color .25s ease;
+}
+
+.checkout-field input:focus {
+    border-color: #0a0a0a;
+}
+
+.checkout-field input::placeholder {
+    color: #aaa7a2;
+}
+
+
+/* ========================================
+   ORDER REFERENCE
+======================================== */
+
+.reference-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background: #f7f6f3;
+}
+
+.reference-box span {
+    color: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .6rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.reference-box strong {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: .08em;
+}
+
+.reference-note {
+    margin: 15px 0 0;
+    color: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .62rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   PAYMENT OPTIONS
+======================================== */
+
+.payment-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.payment-option {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 260px;
+    padding: 28px;
+    border: 1px solid #dedbd6;
+}
+
+.payment-option-content h4 {
+    margin: 10px 0 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+}
+
+.payment-option-content p {
+    margin: 15px 0 0;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .68rem;
+    line-height: 1.7;
+}
+
+.payment-option-label {
+    color: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .55rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+
+.payment-button {
+    width: 100%;
+    margin-top: 35px;
+    padding: 16px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .58rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        border-color .3s ease;
+}
+
+.payment-button-primary {
+    border: 1px solid #0a0a0a;
+    background: #0a0a0a;
+    color: #ffffff;
+}
+
+.payment-button-primary:hover {
+    background: transparent;
+    color: #0a0a0a;
+}
+
+.payment-button-secondary {
+    border: 1px solid #0a0a0a;
+    background: transparent;
+    color: #0a0a0a;
+}
+
+.payment-button-secondary:hover {
+    background: #0a0a0a;
+    color: #ffffff;
+}
+
+.payment-button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+
+/* ========================================
+   BANK TRANSFER
+======================================== */
+
+.bank-instruction {
+    max-width: 600px;
+    margin: 0 0 30px;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7rem;
+    line-height: 1.7;
+}
+
+.bank-amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 22px;
+    background: #f7f6f3;
+}
+
+.bank-amount span {
+    color: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .6rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.bank-amount strong {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.bank-details-list {
+    border-top: 1px solid #dedbd6;
+}
+
+.bank-detail-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 18px 0;
+    border-bottom: 1px solid #dedbd6;
+}
+
+.bank-detail-row span {
+    color: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .58rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.bank-detail-row strong {
+    color: #0a0a0a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7rem;
+    font-weight: 400;
+    text-align: right;
+}
+
+.bank-confirmation {
+    margin-top: 35px;
+    padding-top: 30px;
+    border-top: 1px solid #dedbd6;
+}
+
+.bank-confirmation p {
+    margin: 0;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .68rem;
+    line-height: 1.7;
+}
+
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 22px;
+    padding: 15px 20px;
+    border: 1px solid #0a0a0a;
+    background: #0a0a0a;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .58rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition:
+        background-color .3s ease,
+        color .3s ease;
+}
+
+.whatsapp-button:hover {
+    background: transparent;
+    color: #0a0a0a;
+}
+
+.whatsapp-button span {
+    transition: transform .25s ease;
+}
+
+.whatsapp-button:hover span {
+    transform: translateX(4px);
+}
+
+
+/* ========================================
+   CHECKOUT SUCCESS
+======================================== */
+
+.checkout-success {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.checkout-success h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.checkout-success > p:not(.checkout-eyebrow):not(.payment-note) {
+    max-width: 500px;
+    margin: 25px auto 0;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .75rem;
+    line-height: 1.8;
+}
+
+.success-reference {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    margin: 35px auto 0;
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #dedbd6;
+}
+
+.success-reference span {
+    color: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .57rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.success-reference strong {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8rem;
+    letter-spacing: .08em;
+}
+
+.payment-note {
+    margin: 20px 0 0;
+    color: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .6rem;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   CHECKOUT TABLET
+======================================== */
+
+@media (max-width: 700px) {
+
+    .checkout-section {
+        padding: 75px 0 100px;
+    }
+
+    .checkout-inner {
+        width: min(100% - 36px, 600px);
+    }
+
+    .checkout-form {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout-field:last-child {
+        grid-column: auto;
+    }
+
+    .payment-options {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ========================================
+   CHECKOUT MOBILE
+======================================== */
+
+@media (max-width: 500px) {
+
+    .checkout-card {
+        padding: 25px 20px;
+    }
+
+    .checkout-card-heading {
+        gap: 12px;
+    }
+
+    .checkout-card-heading h3 {
+        font-size: 1.25rem;
+    }
+
+    .payment-option {
+        min-height: auto;
+        padding: 22px;
+    }
+
+    .reference-box {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .bank-detail-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .bank-detail-row strong {
+        text-align: left;
+    }
+
+    .bank-amount {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}

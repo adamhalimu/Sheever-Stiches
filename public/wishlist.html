@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+     <meta charset="UTF-8">
+    <link rel="icon" href="/public/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png?v=4">
+<link rel="apple-touch-icon" href="/public/favicon-192.png">
+
+
+    <title>Wishlist | Sheever Stitches</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/wishlist.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+
+    <!-- Announcement Bar -->
+
+    <div class="announcement-bar">
+
+        <div class="announcement-track">
+
+            <p
+                class="announcement-text"
+                id="announcementText"
+            >
+                New collection now available
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Navbar -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <div class="nav-left">
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="navLinks"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+
+                <ul
+                    class="nav-links"
+                    id="navLinks"
+                >
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="collections.html">
+                            Collections
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a
+                            href="bespoke.html"
+                            
+                        >
+                            Bespoke
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <a
+                href="index.html"
+                class="navbar-logo"
+            >
+                SHEEVER STITCHES
+            </a>
+
+
+            <div class="nav-actions">
+
+                <a
+                    href="wishlist.html"
+                    class="nav-icon"
+                    aria-label="Wishlist"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                    >
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0 7.78Z"/>
+                    </svg>
+
+                    <span
+                        class="nav-badge"
+                        id="wishlistCount"
+                        aria-label="0 items in wishlist"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="cart.html"
+                    class="nav-icon"
+                    aria-label="Shopping bag"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                    >
+                        <path d="M6 8h12l1 13H5L6 8Z"/>
+                        <path d="M9 8a3 3 0 0 1 6 0"/>
+                    </svg>
+
+                    <span
+                        class="cart-count"
+                        id="cartCount"
+                        aria-label="0 items in shopping bag"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- Wishlist Header -->
+
+        <section
+            class="wishlist-header"
+            aria-labelledby="wishlistTitle"
+        >
+
+            <p class="wishlist-eyebrow">
+                Your Saved Pieces
+            </p>
+
+            <h1 id="wishlistTitle">
+                Wishlist
+            </h1>
+
+            <p
+                class="wishlist-item-count"
+                id="wishlistItemCount"
+                aria-live="polite"
+            >
+                0 pieces
+            </p>
+
+        </section>
+
+
+        <!-- Wishlist Content -->
+
+        <section class="wishlist-section">
+
+            <div
+                class="wishlist-grid"
+                id="wishlistItems"
+            >
+                <!-- Wishlist products generated by JavaScript -->
+            </div>
+
+
+            <!-- Empty Wishlist -->
+
+            <div
+                class="empty-wishlist"
+                id="emptyWishlist"
+                hidden
+            >
+
+                <p class="empty-wishlist-eyebrow">
+                    Nothing saved yet
+                </p>
+
+                <h2>
+                    Your wishlist is waiting.
+                </h2>
+
+                <p>
+                    Save the pieces you love and come
+                    back to them whenever you're ready.
+                </p>
+
+                <a
+                    href="collections.html"
+                    class="continue-shopping"
+                >
+                    Explore Collections
+                    <span aria-hidden="true">→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
+                    SHEEVER STITCHES
+                </a>
+
+                <p class="footer-tagline">
+                    Timeless silhouettes. Thoughtful craftsmanship.
+                    Made to be remembered.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="collections.html">
+                            Collections
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            Our Story
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cart.html">
+                            Shopping Bag
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Connect
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#">
+                            Instagram
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Facebook
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:hello@sheeverstitches.com">
+                            Email Us
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-column footer-contact">
+
+                <h3>
+                    Atelier
+                </h3>
+
+                <p>
+                    Made with intention.<br>
+                    Designed for you.
+                </p>
+
+                <a
+                    href="contact.html"
+                    class="footer-contact-link"
+                >
+                    Get in Touch
+                    <span aria-hidden="true">
+                        →
+                    </span>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Sheever Stitches. All rights reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+
+                <a href="#">
+                    Privacy
+                </a>
+
+                <a href="#">
+                    Terms
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/navbar.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/product.js"></script>
+
+</body>
+
+</html>

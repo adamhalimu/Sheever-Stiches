@@ -1,0 +1,266 @@
+/* ========================================
+   BTS SECTION
+======================================== */
+
+.bts-section {
+    width: 100%;
+    min-height: 680px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #f8f7f4;
+    color: #0a0a0a;
+}
+
+/* ========================================
+   VISUAL
+======================================== */
+
+.bts-visual {
+    min-height: 680px;
+    overflow: hidden;
+}
+.bts-video {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+.bts-visual-placeholder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 680px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111111 0%,
+            #2b2b2b 48%,
+            #151515 100%
+        );
+
+    color: #ffffff;
+}
+
+.bts-visual-placeholder::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(255,255,255,.08),
+            transparent 42%
+        );
+}
+
+.bts-visual-label {
+    position: absolute;
+    left: 32px;
+    bottom: 30px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .6rem;
+    font-weight: 400;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    opacity: .7;
+}
+
+.bts-play-indicator {
+    position: relative;
+    z-index: 2;
+
+    width: 76px;
+    height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,.75);
+    border-radius: 50%;
+}
+
+.bts-play-indicator svg {
+    width: 20px;
+    height: 20px;
+
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 1.4;
+    stroke-linejoin: round;
+}
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.bts-content {
+    min-width: 0;
+    padding: clamp(60px, 8vw, 120px);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bts-eyebrow {
+    margin: 0 0 24px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .65rem;
+    font-weight: 400;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.bts-content h2 {
+    max-width: 520px;
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.5rem, 4vw, 4.8rem);
+    font-weight: 400;
+    line-height: .98;
+    letter-spacing: -.025em;
+}
+
+.bts-content h2 em {
+    display: block;
+    margin-top: 8px;
+
+    font-style: italic;
+    font-weight: 400;
+}
+
+.bts-description {
+    max-width: 500px;
+    margin: 30px 0 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: .015em;
+    color: #444444;
+}
+
+.bts-link {
+    width: fit-content;
+    margin-top: 38px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #0a0a0a;
+    text-decoration: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .65rem;
+    font-weight: 400;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+
+    border-bottom: 1px solid #0a0a0a;
+    padding-bottom: 8px;
+
+    transition:
+        opacity .3s ease,
+        gap .3s ease;
+}
+
+.bts-link:hover {
+    opacity: .55;
+    gap: 17px;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    .bts-section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bts-visual,
+    .bts-visual-placeholder {
+        min-height: 600px;
+    }
+
+    .bts-content {
+        padding: 60px 42px;
+    }
+
+    .bts-content h2 {
+        font-size: clamp(2.2rem, 4vw, 3.5rem);
+    }
+
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .bts-section {
+        grid-template-columns: 1fr;
+    }
+
+    .bts-visual,
+    .bts-visual-placeholder {
+        min-height: 480px;
+    }
+
+    .bts-content {
+        padding: 64px 24px 72px;
+    }
+
+    .bts-content h2 {
+        font-size: clamp(2.4rem, 11vw, 4rem);
+    }
+
+    .bts-description {
+        font-size: .85rem;
+        line-height: 1.75;
+    }
+
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 380px) {
+
+    .bts-visual,
+    .bts-visual-placeholder {
+        min-height: 400px;
+    }
+
+    .bts-content {
+        padding: 52px 18px 60px;
+    }
+
+    .bts-play-indicator {
+        width: 64px;
+        height: 64px;
+    }
+
+    .bts-visual-label {
+        left: 20px;
+        bottom: 20px;
+    }
+
+}
